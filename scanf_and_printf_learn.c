@@ -2,7 +2,7 @@
 #define NAME "wm"
 #define PI 3.14
 
-int x(void)
+int scanf_and_printf_learn(void)
 {
 
     /*
