@@ -27,6 +27,7 @@ int main() {
     printf("age1=%d, age2=%d.\n", age1,age2);
 
     //%c前面的空格>=1个时候，该scanf会读取输入中第一个非空白字符（空格，制表，回车）
+    //%c前面没有空格的时候，从输入的第一个字符开始读取
     char c;
     scanf("     %c", &c);
     printf("%c\n", c);
