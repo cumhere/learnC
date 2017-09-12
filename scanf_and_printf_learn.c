@@ -2,7 +2,7 @@
 #define NAME "wm"
 #define PI 3.14
 
-int main() {
+int x() {
 
     /*
     int age1 = 99;
