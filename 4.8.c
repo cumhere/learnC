@@ -46,3 +46,18 @@ int n3(void)
 
     return 0;
 }
+
+int n4(void)
+{
+    char name[10];
+    float height;
+
+    printf("Name:");
+    scanf("%s", name);
+    printf("Height(in cm):");
+    scanf("%f", &height);
+    height = height / 100.0;
+    printf("%s, you are %.2fm tall.", name, height);
+
+    return 0;
+}

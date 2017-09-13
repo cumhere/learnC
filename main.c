@@ -7,6 +7,6 @@
 
 int main(void)
 {
-    n3();
+    n4();
     return 0;
 }
