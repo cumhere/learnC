@@ -3,6 +3,7 @@
 //
 #include <stdio.h>
 #include <string.h>
+#include <float.h>
 #define bits_per_byte 8
 
 int n1(void)
@@ -96,6 +97,24 @@ int n6(void)
     printf("%s %s\n", firstName, lastName);
     printf("%*d %*d\n", strlen(firstName), strlen(firstName), strlen(lastName), strlen(lastName));
     printf("%-*d %-*d\n", strlen(firstName), strlen(firstName), strlen(lastName), strlen(lastName));
+
+    return 0;
+}
+
+int n7(void)
+{
+    float f = 1.0/3.0;
+    double d = 1.0/3.0;
+    int width = 20;
+
+    printf("%-*s%-*s\n", width, "float", width, "double");
+    printf("%-*.6f%-*.6f\n", width, f, width, d);
+    printf("%-*.12f%-*.12f\n", width, f, width, d);
+    printf("%-*.16f%-*.16f\n", width, f, width, d);
+
+    printf("\n");
+    printf("float dig is %d\n", FLT_DIG);
+    printf("double dig is %d\n", DBL_DIG);
 
     return 0;
 }
