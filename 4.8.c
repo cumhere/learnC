@@ -84,3 +84,18 @@ int n5(void)
 
     return 0;
 }
+
+int n6(void)
+{
+    char firstName[10];
+    char lastName[10];
+
+    printf("Enter 1st and last name in this format:xx xx");
+    printf(">");
+    scanf("%s%s", firstName, lastName);
+    printf("%s %s\n", firstName, lastName);
+    printf("%*d %*d\n", strlen(firstName), strlen(firstName), strlen(lastName), strlen(lastName));
+    printf("%-*d %-*d\n", strlen(firstName), strlen(firstName), strlen(lastName), strlen(lastName));
+
+    return 0;
+}
