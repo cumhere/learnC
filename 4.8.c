@@ -3,6 +3,7 @@
 //
 #include <stdio.h>
 #include <string.h>
+#define bits_per_byte 8
 
 int n1(void)
 {
@@ -58,6 +59,28 @@ int n4(void)
     scanf("%f", &height);
     height = height / 100.0;
     printf("%s, you are %.2fm tall.", name, height);
+
+    return 0;
+}
+
+int n5(void)
+{
+    float speed;
+    float size;
+    float time;
+
+    printf("Enter download speed(Mb/s):");
+    printf(">");
+    scanf("%f", &speed);
+    printf("Enter size of the file(MB):");
+    printf(">");
+    scanf("%f", &size);
+
+    time = size / (speed / bits_per_byte);
+
+    printf("At %.2f megabits per seconds, "
+                   "a file of %.2f megabytes "
+                   "downloads in %.2f seconds.", speed, size, time);
 
     return 0;
 }
