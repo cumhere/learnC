@@ -33,3 +33,16 @@ int n2(void)
 
     return 0;
 }
+
+int n3(void)
+{
+    float f;
+    printf(">");
+    scanf("%f", &f);
+    printf("This input is %.1f or %.1e.\n", f, f);
+    printf(">");
+    scanf("%f", &f);
+    printf("This input is %+.3f or %.3e.\n", f, f);
+
+    return 0;
+}
