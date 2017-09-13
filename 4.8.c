@@ -2,6 +2,7 @@
 // Created by 王盟 on 2017/9/12.
 //
 #include <stdio.h>
+#include <string.h>
 
 int n1(void)
 {
@@ -15,6 +16,20 @@ int n1(void)
     // 用来分割输入，然后把值送入各个变量中。如果scanf(“%d%s”);
     // 是这样的话，当用户输入23dsf时，scanf会自动检测最后一个整型的位置，然后分割后面的字符串给字符数组变量，前面的数字给整形变量。
     printf("Hi, *%s* *%s*\n", firstName, lastName);
+
+    return 0;
+}
+
+int n2(void)
+{
+    char name[10];
+
+    printf(">");
+    scanf("%s", name);
+    printf("*%s*\n", name);
+    printf("*%20s*\n", name);//只能输入"wm",带引号的输入名字才可以
+    printf("*%-20s*\n", name);//只能输入"wm",带引号的输入名字才可以
+    printf("*%*s*\n", strlen(name) + 3, name);
 
     return 0;
 }
