@@ -5,6 +5,8 @@
 #include <string.h>
 #include <float.h>
 #define bits_per_byte 8
+#define LITERS_PER_GALLON 3.785
+#define KILOMETERS_PER_MILE 1.609
 
 int n1(void)
 {
@@ -115,6 +117,27 @@ int n7(void)
     printf("\n");
     printf("float dig is %d\n", FLT_DIG);
     printf("double dig is %d\n", DBL_DIG);
+
+    return 0;
+}
+
+int n8(void)
+{
+    float distance;
+    float gas_consumed;
+    float miles_per_gallon;
+    const float K = LITERS_PER_GALLON * 100 /KILOMETERS_PER_MILE;
+
+    printf("Enter distance in miles:");
+    scanf("%f", &distance);
+    printf("Enter gas consumed in gallon:");
+    scanf("%f", &gas_consumed);
+
+    miles_per_gallon = distance / gas_consumed;
+    printf("Miles per gallon are %.1f (m/g)\n", miles_per_gallon);
+    printf("Liters per 100 kilometers are %.1f (l/100km)\n", K * miles_per_gallon);
+
+
 
     return 0;
 }
